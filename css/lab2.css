@@ -1,82 +1,6 @@
-h1 {
-    color: #800000;
-}
-
-nav ul {
-    list-style: none;
-    background-color: #deb887;
-    float: right;
-    border-radius: 10px 10px 0 0;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    display: inline-block;
-    padding: 17px;
-    color: #A52A2A;
-}
-
-body > div {
-    width: 1000px;
-    margin: auto;
-}
-
-* {
-    text-align: justify;
-}
-
-img {
-    width: 100%;
-}
-
-div > ul {
-    list-style: none;
-    padding-left: 1%;
-    height: 435px;
-}
-
-div > ul > li {
-    display: inline-block;
-    width: 32%;
-    margin-right: 1%;
-    float: left;
-
-}
-
-li > h3 {
-    background-color: #7FFFD4;
-    color: #0000FF;
-    padding: 8px 8px;
-    margin: 0;
-}
-
-li > img {
-    margin-bottom: -2%;
-}
-
-li > div {
-    width: 100%;
-    height: 100px;
-    background-color: #DEB887;
-    padding: 5% 3%;
-    box-sizing: border-box;
-}
-
-footer {
-    background-color: #7FFFD4;
-    height: 45px;
-    padding: 12px;
-    box-sizing: border-box;
-}
-
-u {
-    color: #551A8B;
-}
-
 body > div > div > div {
     position: relative;
-    width: 45%;
+    width: 47%;
     float: left;
 }
 
@@ -89,5 +13,39 @@ form {
     background-color: #619E9F;
     border-radius: 5px;
     float: right;
-    width: 45%;
+    width: 47%;
+    padding-top: 2%;
 }
+
+form label {
+    margin-left: 5%;
+    color: #FFFFFF;
+    font-size: large;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+input[type=text], input[type=date] {
+    position: relative;
+    width: 90%;
+    border-radius: 7px;
+    height: 35px;
+    margin: 5px auto;
+    display: block;
+    border: 0;
+    font-weight: bold;
+    font-size: medium;
+    color: grey;
+}
+
+input[type=text]:focus, input[type=date]:focus {
+    background-color: #FFFD37;
+    color: #000000;
+}
+
+#email + label {
+    display: block;
+    position: relative;
+    width: 50%;
+}
+
