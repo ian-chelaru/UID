@@ -15,6 +15,7 @@ form {
     float: right;
     width: 47%;
     padding-top: 2%;
+    padding-bottom: 20px;
 }
 
 form label {
@@ -43,9 +44,50 @@ input[type=text]:focus, input[type=date]:focus {
     color: #000000;
 }
 
-#email + label {
+#email + br + label {
     display: block;
     position: relative;
-    width: 50%;
+    width: 40%;
+    float: left;
+    padding-top: 8px;
+    height: 35px;
+    vertical-align: middle;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
+#favorite_color {
+    position: relative;
+    left: 9%;
+    width: 40%;
+    border-radius: 7px;
+    height: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#favorite_color + br + div {
+    clear: both;
+}
+
+#submit, #reset {
+    width: 40%;
+    height: 35px;
+    border-radius: 7px;
+    border: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: medium;
+    color: grey;
+    background-color: white;
+}
+
+#submit {
+    margin-left: 5%;
+}
+
+#reset {
+    position: relative;
+    left: 9.5%;
+}
