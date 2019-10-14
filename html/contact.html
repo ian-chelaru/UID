@@ -5,6 +5,8 @@
     <title>Contact</title>
     <link rel="stylesheet" href="../css/lab1.css" type="text/css">
     <link rel="stylesheet" href="../css/lab2.css" type="text/css">
+    <link rel="stylesheet" href="../css/lab3.css" type="text/css">
+    <script src="../js/lab3.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -15,11 +17,12 @@
     </h1>
     <nav>
         <ul>
-            <li><a><strong>Home</strong></a></li>
+            <li><a href="index.html"><strong>Home</strong></a></li>
             <li><a><strong>Cruises</strong></a></li>
             <li><a><strong>Hiking</strong></a></li>
             <li><a><strong>Swimming</strong></a></li>
             <li><a><strong>Special offers</strong></a></li>
+            <li><a class="active" href="contact.html"><strong>Contact</strong></a></li>
         </ul>
         <div></div>
     </nav>
@@ -58,8 +61,11 @@
         </div>
 
         <form>
+
+            <ul id="messages"></ul>
+
             <label for="surname">Surname</label><br>
-            <input type="text" id="surname"><br>
+            <input type="text" id="surname" value="test"><br>
 
             <label for="first_name">First name</label><br>
             <input type="text" id="first_name"><br>
