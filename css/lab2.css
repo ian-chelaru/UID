@@ -91,3 +91,8 @@ input[type=text]:focus, input[type=date]:focus {
     position: relative;
     left: 9.5%;
 }
+
+#submit:hover, #reset:hover {
+    color: #FF0000;
+    cursor: pointer
+}

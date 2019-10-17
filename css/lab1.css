@@ -85,6 +85,7 @@ a {
 
 a:hover {
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 .active {

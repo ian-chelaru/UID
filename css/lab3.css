@@ -1,3 +1,7 @@
 .incorrect_field {
     background-color: orange;
 }
+
+.correct_field {
+    background-color: #FFFFFF;
+}

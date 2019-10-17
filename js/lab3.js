@@ -1,7 +1,7 @@
 window.onload = function()
 {
-    var ref = document.getElementById("surname");
-    console.log(ref.value);
+    // var ref = document.getElementById("surname");
+    // console.log(ref.value);
 
     // ref.onblur = focusLost;
     // alert(ref.value);
@@ -15,7 +15,7 @@ window.onload = function()
             inputs[i].onblur = focusLost;
         }
     }
-    console.log(inputs);
+    // console.log(inputs);
 
     var title = getLabel("surname");
 
@@ -27,17 +27,72 @@ window.onload = function()
 
 function focusLost()
 {
-    if (this.value !== "")
+    var functionName = "validate_" + this.getAttribute("id");
+    if (window[functionName](this.value))
     {
-        // alert(this.value);
-        // alert(this.getAttribute("id"));
-        // alert(this.id);
+        this.className = "correct_field";
     }
     else
     {
         this.className = "incorrect_field";
-        // alert("test");
     }
+
+    // if (this.value !== "")
+    // {
+    //     alert(this.value);
+    //     alert(this.getAttribute("id"));
+    //     alert(this.id);
+    // }
+    // else
+    // {
+    //     this.className = "incorrect_field";
+    //     alert("test");
+    // }
+}
+
+function validate_surname(value)
+{
+    console.log(value);
+    return value.length >= 3;
+}
+
+function validate_first_name(value)
+{
+    console.log(value);
+    return value.length >= 3;
+}
+
+function validate_address(value)
+{
+    console.log(value);
+    if (value.length < 3)
+    {
+        return false;
+    }
+    if (!/\d/.test(value))
+    {
+        return false;
+    }
+    return !/[@#$%^&*]/.test(value);
+
+}
+
+function validate_birth_date(value)
+{
+    console.log(value);
+    return true;
+}
+
+function validate_phone_number(value)
+{
+    console.log(value);
+    return true;
+}
+
+function validate_email(value)
+{
+    console.log(value);
+    return true;
 }
 
 function getLabel(inputId)
