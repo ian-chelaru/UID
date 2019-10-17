@@ -1,11 +1,5 @@
 window.onload = function()
 {
-    // var ref = document.getElementById("surname");
-    // console.log(ref.value);
-
-    // ref.onblur = focusLost;
-    // alert(ref.value);
-
     var inputs = document.getElementsByTagName("input");
     var inputsLen = inputs.length;
     for (var i = 0; i < inputsLen; i++)
@@ -15,19 +9,12 @@ window.onload = function()
             inputs[i].onblur = focusLost;
         }
     }
-    // console.log(inputs);
-
-    var title = getLabel("surname");
-
-    var list = document.getElementById("messages");
-    list.innerHTML = "<li>" + title + "</li>";
-
-    console.log(title);
 };
 
 function focusLost()
 {
-    var functionName = "validate_" + this.getAttribute("id");
+    var id = this.getAttribute("id");
+    var functionName = "validate_" + id;
     if (window[functionName](this.value))
     {
         this.className = "correct_field";
@@ -36,63 +23,63 @@ function focusLost()
     {
         this.className = "incorrect_field";
     }
-
-    // if (this.value !== "")
-    // {
-    //     alert(this.value);
-    //     alert(this.getAttribute("id"));
-    //     alert(this.id);
-    // }
-    // else
-    // {
-    //     this.className = "incorrect_field";
-    //     alert("test");
-    // }
 }
 
-function validate_surname(value)
+function submitForm()
 {
-    console.log(value);
-    return value.length >= 3;
-}
-
-function validate_first_name(value)
-{
-    console.log(value);
-    return value.length >= 3;
-}
-
-function validate_address(value)
-{
-    console.log(value);
-    if (value.length < 3)
+    clearErrorList();
+    var inputs = document.getElementsByTagName("input");
+    var inputsLen = inputs.length;
+    var ok = true;
+    for (var i = 0; i < inputsLen; i++)
     {
-        return false;
+        if (inputs[i].getAttribute("type") === "text")
+        {
+            var id = inputs[i].getAttribute("id");
+            var functionName = "validate_" + id;
+            if (!window[functionName](inputs[i].value))
+            {
+                ok = false;
+                inputs[i].className = "incorrect_field";
+                displayErrorField(id);
+            }
+        }
     }
-    if (!/\d/.test(value))
+    if (ok)
     {
-        return false;
+        document.getElementById("messages").innerHTML = "<li>" + "Submission Successful" + "</li>";
     }
-    return !/[@#$%^&*]/.test(value);
-
 }
 
-function validate_birth_date(value)
+function displayErrorField(id)
 {
-    console.log(value);
-    return true;
+    var labelTitle = getLabel(id);
+    var list = document.getElementById("messages");
+    list.innerHTML += "<li>" + "Invalid " + labelTitle + "</li>";
 }
 
-function validate_phone_number(value)
+function resetForm()
 {
-    console.log(value);
-    return true;
+    clearFields();
+    clearErrorList();
 }
 
-function validate_email(value)
+function clearFields()
 {
-    console.log(value);
-    return true;
+    var inputs = document.getElementsByTagName("input");
+    var inputsLen = inputs.length;
+    for (var i = 0; i < inputsLen; i++)
+    {
+        if (inputs[i].getAttribute("type") === "text")
+        {
+            inputs[i].value = "";
+        }
+    }
+}
+
+function clearErrorList()
+{
+    document.getElementById("messages").innerHTML = "";
 }
 
 function getLabel(inputId)
@@ -106,4 +93,43 @@ function getLabel(inputId)
             return labels[i].innerHTML;
         }
     }
+}
+
+function validate_surname(value)
+{
+    console.log(value);
+    return value.length >= 3;
+}
+
+function validate_first_name(value)
+{
+    return value.length >= 3;
+}
+
+function validate_address(value)
+{
+    if (value.length < 3)
+    {
+        return false;
+    }
+    if (!/\d/.test(value))
+    {
+        return false;
+    }
+    return !/[@#$%^&*]/.test(value);
+}
+
+function validate_birth_date(value)
+{
+    return /^(0[1-9]|[1-2][0-9]|3[0-1])\/(0[1-9]|1[0-2])\/\d{4}$/.test(value);
+}
+
+function validate_phone_number(value)
+{
+    return /^\d{3}-\d{9}$/.test(value);
+}
+
+function validate_email(value)
+{
+    return /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value);
 }
