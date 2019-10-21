@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../css/lab1.css" type="text/css">
+    <link rel="stylesheet" href="../css/lab2.css" type="text/css">
+    <link rel="stylesheet" href="../css/lab3.css" type="text/css">
+    <link rel="stylesheet" href="../css/lab4.css" type="text/css">
+    <link rel="stylesheet" href="../css/fontawesome-free-5.11.2-web/css/all.css">
+    <script src="../js/jquery-3.3.1.js" type="text/javascript"></script>
+    <script src="../js/lab3.js" type="text/javascript"></script>
+    <script src="../js/lab4.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div>
+
+    <h1>
+        <strong> CalaTour </strong> - <em> your travel agency </em>
+    </h1>
+    <nav>
+        <ul>
+            <li><a href="index.html"><strong>Home</strong></a></li>
+            <li><a><strong>Cruises</strong></a></li>
+            <li><a><strong>Hiking</strong></a></li>
+            <li><a><strong>Swimming</strong></a></li>
+            <li><a><strong>Special offers</strong></a></li>
+            <li><a class="active" href="contact.html"><strong>Contact</strong></a></li>
+        </ul>
+        <div></div>
+    </nav>
+
+    <img src="../images/caribbean.jpg" alt="Error loading image">
+
+    <h2>
+        CONTACT
+    </h2>
+
+    <div>
+
+        <div>
+            <strong>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac mauris et felis porttitor fringilla nec
+                et
+                sem.
+                Praesent convallis eros a quam pulvinar malesuada. Integer et blandit purus. Duis ut erat in turpis
+                facilisis
+                molestie. Nam nunc enim, vestibulum ut pharetra nec, accumsan ut sapien. Pellentesque commodo arcu
+                mauris,
+                in
+                malesuada nibh ultricies vitae. Vivamus faucibus leo vitae quam ultrices euismod. Duis et dolor in nibh
+                molestie
+                vulputate. Praesent luctus accumsan nunc et tempor. Quisque ultrices scelerisque ullamcorper. Vivamus
+                eget
+                convallis mi. Cras dolor odio, ultricies non gravida eu, facilisis quis libero. Vestibulum mollis vitae
+                neque
+                blandit maximus. Maecenas malesuada mauris sit amet neque elementum, sed interdum nisl rutrum. Phasellus
+                ut
+                arcu
+                erat. Sed nec purus at est lobortis efficitur. Praesent tempus non nisi sit amet lobortis. Praesent et
+                sapien
+                erat.
+            </strong>
+        </div>
+
+        <form>
+
+            <ul id="messages"></ul>
+
+            <label for="surname">Surname</label><br>
+            <input type="text" id="surname" value="Chelaru"><br>
+
+            <label for="first_name">First name</label><br>
+            <input type="text" id="first_name" value="Ian"><br>
+
+            <label for="address">Address</label><br>
+            <input type="text" id="address" value="address1"><br>
+
+            <label for="birth_date">Birth date</label><br>
+            <input type="text" id="birth_date" value="01/10/2010"><br>
+
+            <label for="phone_number">Phone number</label><br>
+            <input type="text" id="phone_number" value="000-123456789"><br>
+
+            <label for="email">Email</label><br>
+            <input type="text" id="email" value="my_email@calatour.ro"><br>
+
+            <label for="favorite_color">Favorite color</label>
+            <input type="color" id="favorite_color"><br>
+
+            <div></div>
+
+            <input type="button" value="Submit" id="submit" onclick="submitForm()">
+            <input type="button" value="Reset form" id="reset" onclick="resetForm()">
+
+        </form>
+
+    </div>
+
+    <h2>
+        LAST MINUTE
+    </h2>
+
+    <ul>
+        <li>
+            <h3><strong>Crete - 5 days</strong></h3>
+            <img src="../images/crete.jpg" alt="Error loading image">
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu pulvinar elit. Donec venenatis
+                placerat sapien eget.
+            </div>
+        </li>
+        <li>
+            <h3><strong>Barcelona</strong></h3>
+            <img src="../images/barcelona.jpg" alt="Error loading image">
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec maximus, erat quis imperdiet pretium,
+                quam arcu semper.
+            </div>
+        </li>
+        <li>
+            <h3><strong>Montenegro</strong></h3>
+            <img src="../images/montenegro.jpg" alt="Error loading image">
+            <div>
+                Phasellus sodales massa odio. In sed augue quis nisi volutpat volutpat.
+            </div>
+        </li>
+    </ul>
+
+    <footer>&copy; 2019 <u>Ian Chelaru</u></footer>
+
+    <br>
+
+    <div id="chat">
+
+        <div id="chat_header">
+            <i class="fas fa-comments"></i>
+            <h2>
+                Chat with us !
+            </h2>
+            <i class="fas fa-times"></i>
+        </div>
+
+        <form>
+            <p>
+                Authentication required
+            </p>
+
+            <label for="username"></label>
+            <input type="text" id="username" value="username">
+
+            <label for="password"></label>
+            <input type="text" id="password" value="password">
+
+            <input type="submit" id="authenticate" value="Authenticate">
+        </form>
+
+        <div id="chat_animation">
+            <img src="../images/loading.gif">
+            Processing ...
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
