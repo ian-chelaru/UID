@@ -11,6 +11,7 @@
     <script src="../js/jquery-3.3.1.js" type="text/javascript"></script>
     <script src="../js/lab3.js" type="text/javascript"></script>
     <script src="../js/lab4.js" type="text/javascript"></script>
+<!--    <script src="../js/lab5.js" type="text/javascript"></script>-->
 </head>
 <body>
 
@@ -140,17 +141,19 @@
             <i class="fas fa-times"></i>
         </div>
 
-        <form>
-            <p>
+        <form id="chat_form">
+            <p></p>
+            <label>
                 Authentication required
-            </p>
+            </label>
 
             <label for="username"></label>
-            <input type="text" id="username" value="username">
+            <input type="text" id="username" placeholder="username">
 
             <label for="password"></label>
-            <input type="text" id="password" value="password">
+            <input type="text" id="password" placeholder="password">
 
+<!--            <label for="authenticate"></label>-->
             <input type="submit" id="authenticate" value="Authenticate">
         </form>
 
@@ -159,7 +162,33 @@
             Processing ...
         </div>
 
+        <!--   laboratory 5     -->
+
+
+
+        <!-- end of laboratory5 -->
+
     </div>
+
+    <div id="actual_chat">
+
+        <div id="welcome">
+            <i class="fas fa-user"></i>
+            <span>Welcome</span>
+            <i class="fas fa-sign-out-alt"></i>
+        </div>
+
+        <label for="conversation"></label>
+        <textarea id="conversation">
+
+        </textarea>
+
+        <label for="chat_msg"></label>
+        <input type="text" id="chat_msg" placeholder="type message">
+
+        <input type="button" value="Send" id="send">
+    </div>
+
 </div>
 
 </body>

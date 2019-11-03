@@ -35,6 +35,46 @@ $(document).ready(function()
         }
     });
 
+    /*var hidden = false;
+
+    $("#chat_header").click(function()
+        {
+            console.log("blablabla");
+            var chatHeader = $("#chat_header");
+            var chatForm = $("#chat_form");
+
+            if (hidden)
+            {
+                console.log("hidden");
+                chatHeader.animate({
+                    width: "300px"
+                },
+                1000,
+                function()
+                {
+                    chatForm.animate({
+                        height: "78%"
+                    })
+                })
+            }
+            else
+            {
+                console.log("not hidden");
+                chatForm.animate({
+                        height: "0"
+                    },
+                    1000,
+                    function()
+                    {
+                        chatHeader.animate({
+                            width: "40px"
+                        })
+                    })
+            }
+
+            hidden = !hidden;
+        });*/
+
     $("#chat_animation").hide();
 
     $("#chat form").submit(function()
